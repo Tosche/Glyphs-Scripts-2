@@ -68,7 +68,7 @@ availableDefaultFeatures = [f.name for f in thisFont.features if f.name in defau
 editTab = Glyphs.currentDocument.windowController().activeEditViewController()
 for featureName in availableDefaultFeatures:
 	if not featureName in editTab.selectedFeatures():
-		if Glyphs.versionName < 3:
+		if Glyphs.versionNumber < 3:
 			editTab.selectedFeatures().append(featureName)
 		else:
 			editTab.selectedFeatures().addObject_(featureName)
